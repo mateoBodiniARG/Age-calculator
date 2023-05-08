@@ -5,34 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="scrollreveal.js"></script>
     <title>Age Calculator</title>
 </head>
 <body>
     <main>
         <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
-
+        <!-- FORM SECTION -->
         <form action="" class="form__content">
             <!-- DAY -->
-            <div class="form__control">
-                <label for="day" id="label-day">DAY</label>
+            <div class="form__control controlDayAnimation">
+                <label class="error" for="day" id="label-day">DAY</label>
                 <input type="number" placeholder="DD" id="day" min="1" max="31">
-                <span class="ErrorDay"> </span>
+                <span class="ErrorDay error"></span>
             </div>
 
             <!-- MONTH -->
-            <div class="form__control">
-                <label for="month" id="label-month">MONTH</label>
+            <div class="form__control controlMonthAnimation">
+                <label class="error" for="month" id="label-month">MONTH</label>
                 <input type="number" placeholder="MM" id="month" min="1" max="12">
                 <!-- ERROR MONTH -->
-                <span class="ErrorMonth"> </span>
+                <span class="ErrorMonth error"></span>
             </div>
 
             <!-- YEAR -->
-            <div class="form__control">
-                <label for="year" id="label-year">YEAR</label>
+            <div class="form__control controlYearAnimation">
+                <label class="error" for="year" id="label-year">YEAR</label>
                 <input type="number" placeholder="YYYY" id="year" max="2023">
                 <!-- ERROR YEAR-->
-                <span class="ErrorYear"> </span>
+                <span class="ErrorYear"></span>
             </div>
         </form>
         
@@ -50,19 +51,32 @@
 
         <!-- RESULTS SECTION -->
         <section class="results">
-            <p>
-                <span id="yearsScreen">---</span>
-                years
-            </p>
-            <p>
-                <span id="monthsScreen">---</span>
-                months
-            </p>
-            <p>
-                <span id="daysScreen">---</span>
-                days
-            </p>
+
+            <div class="animationYear">
+                <p>
+                    <span id="yearsScreen">---</span>
+                    years
+                </p>
+            </div>
+
+            <div class="animationMonth">
+                <p>
+                    <span id="monthsScreen">---</span>
+                    months
+                </p>
+            </div>
+
+            <div class="dayAnimation">
+                <p>
+                    <span id="daysScreen">---</span>
+                    days
+                </p>
+            </div>
         </section>
     </main>
+
+
+    <script src="app.js"></script>
+    <script src="animation.js"></script>
 </body>
 </html>
