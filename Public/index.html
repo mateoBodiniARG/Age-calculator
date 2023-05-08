@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Age Calculator</title>
+</head>
+<body>
+    <main>
+        <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+        <form action="" class="form__content">
+            <!-- DAY -->
+            <div class="form__control">
+                <label for="day" id="label-day">DAY</label>
+                <input type="number" placeholder="DD" id="day" min="1" max="31">
+                <span class="ErrorDay"> </span>
+            </div>
+
+            <!-- MONTH -->
+            <div class="form__control">
+                <label for="month" id="label-month">MONTH</label>
+                <input type="number" placeholder="MM" id="month" min="1" max="12">
+                <!-- ERROR MONTH -->
+                <span class="ErrorMonth"> </span>
+            </div>
+
+            <!-- YEAR -->
+            <div class="form__control">
+                <label for="year" id="label-year">YEAR</label>
+                <input type="number" placeholder="YYYY" id="year" max="2023">
+                <!-- ERROR YEAR-->
+                <span class="ErrorYear"> </span>
+            </div>
+        </form>
+        
+        <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <!-- BUTTON SECTION -->
+        <section class="button-content">
+            <div class="line-divide"> </div>
+            <div class="btn">
+                <button class="btn-arrow">
+                    <img src="./images/icon-arrow.svg" alt="">
+                </button>
+            </div>
+        </section>
+        <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+        <!-- RESULTS SECTION -->
+        <section class="results">
+            <p>
+                <span id="yearsScreen">---</span>
+                years
+            </p>
+            <p>
+                <span id="monthsScreen">---</span>
+                months
+            </p>
+            <p>
+                <span id="daysScreen">---</span>
+                days
+            </p>
+        </section>
+    </main>
+</body>
+</html>

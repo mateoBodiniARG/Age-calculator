@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* PRIMARY COLORS */
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+
+    /* NEUTRAL COLORS */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 92%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+
+    /* FONT FAMILY */
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--Off-white);
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    padding: 40px;
+    padding-bottom: 740px;
+    padding-right: 120px;
+    background-color: var(--White);
+    width: 50vw;
+    height: 65vh;
+    border-radius: 23px 23px 180px 23px;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+/* FORM CONTENT */
+.form__content{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+label{
+    font-size: 14px;
+    margin-left: -6px;
+    color: var(--Smokey-grey);
+    letter-spacing: 2px;
+    padding-bottom: 8px;
+}
+
+.form__control{
+    display: flex;
+    flex-direction: column;
+}
+
+/* INPUTS */
+
+input{
+    width: 160px;
+    height: 60px;
+    border-radius: 8px;
+    border: solid 1px var(--Light-grey);
+    font-size: 29px;
+    padding-left: 18px;
+    font-weight: 800;
+    color: var(--Off-black);
+}
+
+input:focus {
+    outline: solid 1px var(--Purple)
+  }
+  input:focus::placeholder {
+    color: var(--Off-black);
+  } 
+  
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+/* BUTTON SECTION */
+.line-divide{
+    border: solid 1px var(--Off-white); 
+    margin-top: 50px;
+    width: 100%;
+    margin-left: 40px;
+}
+
+.btn-arrow{
+    background-color: var(--Purple);
+    border: none;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    right: -240px;
+    cursor: pointer;
+}
+.btn-arrow:hover{
+    background-color: var(--Off-black);
+}
+.button-content{
+    position: relative;
+}
+
+.btn{
+    right: -55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -40px;  
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+/* RESULTS SECTION */
+.results{
+    padding-left: 10px;
+    font-size: 100px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.results span{
+    color: var(--Purple);
+}
+
