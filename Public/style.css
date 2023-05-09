@@ -1,163 +1,257 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    /* PRIMARY COLORS */
-    --Purple: hsl(259, 100%, 65%);
-    --Light-red: hsl(0, 100%, 67%);
+:root {
+  /* PRIMARY COLORS */
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
 
-    /* NEUTRAL COLORS */
-    --White: hsl(0, 0%, 100%);
-    --Off-white: hsl(0, 0%, 92%);
-    --Light-grey: hsl(0, 0%, 86%);
-    --Smokey-grey: hsl(0, 1%, 44%);
-    --Off-black: hsl(0, 0%, 8%);
+  /* NEUTRAL COLORS */
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 92%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
 
-    /* FONT FAMILY */
-    --font-family: 'Poppins', sans-serif;
+  /* FONT FAMILY */
+  --font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-color: var(--Off-white);
-    color: black;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-family);
+body {
+  background-color: var(--Off-white);
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
 }
 
-main{
-    padding: 40px;
-    padding-bottom: 740px;
-    padding-right: 120px;
-    background-color: var(--White);
-    width: 50vw;
-    height: 65vh;
-    border-radius: 23px 23px 180px 23px;
+main {
+  padding: 40px;
+  padding-bottom: 740px;
+  padding-right: 120px;
+  background-color: var(--White);
+  width: 50vw;
+  height: 65vh;
+  border-radius: 23px 23px 180px 23px;
+}
+
+::selection {
+  background-color: var(--Purple);
+  color: rgb(255, 255, 255);
 }
 /* -------------------------------------------------------------------------------------------------------------------------------------- */
 /* FORM CONTENT */
-.form__content{
-    margin: 20px;
-    display: flex;
-    justify-content: space-around;
+.form__content {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
-label{
-    font-size: 14px;
-    margin-left: -6px;
-    color: var(--Smokey-grey);
-    letter-spacing: 2px;
-    padding-bottom: 8px;
-    font-weight: 600;
+label {
+  font-size: 14px;
+  margin-left: -6px;
+  color: var(--Smokey-grey);
+  letter-spacing: 2px;
+  padding-bottom: 8px;
+  font-weight: 600;
 }
 
-.form__control{
-    display: flex;
-    flex-direction: column;
+.form__control {
+  display: flex;
+  flex-direction: column;
 }
 
 /* INPUTS */
 
-input{
-    width: 160px;
-    height: 60px;
-    border-radius: 8px;
-    border: solid 1px var(--Light-grey);
-    font-size: 29px;
-    padding-left: 18px;
-    font-weight: 800;
-    color: var(--Off-black);
+input {
+  width: 160px;
+  height: 60px;
+  border-radius: 8px;
+  border: solid 1px var(--Light-grey);
+  font-size: 29px;
+  padding-left: 18px;
+  font-weight: 800;
+  color: var(--Off-black);
 }
 
 input:focus {
-    outline: solid 1px var(--Purple)
-  }
-  input:focus::placeholder {
-    color: var(--Off-black);
-  } 
-  
+  outline: solid 1px var(--Purple);
+}
+input:focus::placeholder {
+  color: var(--Off-black);
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------- */
 /* BUTTON SECTION */
-.line-divide{
-    border: solid 1px var(--Off-white); 
-    margin-top: 50px;
-    width: 100%;
-    margin-left: 40px;
+.line-divide {
+  border: solid 1px var(--Off-white);
+  margin-top: 50px;
+  width: 100%;
+  margin-left: 40px;
 }
 
-.btn-arrow{
-    background-color: var(--Purple);
-    border: none;
-    border-radius: 50%;
-    width: 85px;
-    height: 85px;
-    right: -240px;
-    cursor: pointer;
+.btn-arrow {
+  background-color: var(--Purple);
+  border: none;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  right: -240px;
+  cursor: pointer;
 }
-.btn-arrow:hover{
-    box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
-    background-color: var(--Off-black);
+.btn-arrow:hover {
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 3px 8px;
+  background-color: var(--Off-black);
 }
 
-.btn{
-    right: -55%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -40px;  
+.btn {
+  right: -55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -40px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------- */
 /* RESULTS SECTION */
-.results{
-    padding-left: 10px;
-    font-size: 90px;
-    font-style: italic;
-    font-weight: 800;
+.results {
+  padding-left: 10px;
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 800;
 }
 
-.results span{
-    color: var(--Purple);
-    font-weight: 800;
+.results span {
+  color: var(--Purple);
+  font-weight: 800;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------- */
 /* ERRORS HANDLING */
-.ErrorDay{
-    margin-top: 5px;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 14px;
-    color: var(--Light-red);
+.ErrorDay {
+  margin-top: 5px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--Light-red);
 }
 
-.ErrorMonth{
-    margin-top: 5px;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 14px;
-    color: var(--Light-red);
+.ErrorMonth {
+  margin-top: 5px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--Light-red);
 }
 
+.ErrorYear {
+  margin-top: 5px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--Light-red);
+}
 
-.ErrorYear{
-    margin-top: 5px;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 14px;
-    color: var(--Light-red);
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* MEDIAQUERIES */
+@media (max-width: 1420px) {
+    .results {
+        width: 163%;
+        font-size: 90px;
+        padding-left: 0px;
+      }
+
+  .form__content {
+    justify-content: center;
+    gap: 12px;
+    padding-left: 81px;
+  }
+}
+/* ----------------------------------1300PX--------------------------------------------------------------- */
+@media (max-width: 1300px) {
+    .results {
+        width: 163%;
+        font-size: 80px;
+        padding-left: 0px;
+      }
+  main {
+    padding-bottom: 602px;
+    height: 67vh;
+  }
+  
+}
+
+/* ----------------------------------1180PX--------------------------------------------------------------- */
+@media (max-width: 1180px) {
+    .results {
+        width: 163%;
+        font-size: 80px;
+        padding-left: 0px;
+      }
+}
+
+/* ----------------------------------1060PX--------------------------------------------------------------- */
+@media (max-width: 1060px) {
+  .results {
+    font-size: 60px;
+  }
+  .form__content {
+    padding-left: 88px;
+    justify-content: space-around;
+  }
+
+  input {
+    width: 120px;
+    font-size: 23px;
+    padding-left: 15px;
+  }
+
+  .btn {
+    right: -10%;
+    top: -35px;
+  }
+
+  .btn-arrow {
+    background-color: var(--Purple);
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    right: -240px;
+    cursor: pointer;
+  }
+  main {
+    width: 47vw;
+    border-radius: 23px 23px 120px 23px;
+  }
+
+  .line-divide {
+    width: 390px;
+    margin-left: -14px;
+    margin-right: 20px;
+  }
+  .results {
+    width: 163%;
+    font-size: 70px;
+    padding-left: 0px;
+  }
+
+  .form__content {
+    gap: 25px;
+  }
 }
