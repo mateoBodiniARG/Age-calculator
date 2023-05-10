@@ -1,0 +1,238 @@
+/* MEDIAQUERIES */
+@media (max-width: 1420px) {
+  .results {
+    width: 163%;
+    font-size: 90px;
+    padding-left: 0px;
+  }
+
+  .form__content {
+    justify-content: center;
+    gap: 12px;
+    padding-left: 81px;
+  }
+}
+/* ----------------------------------1300PX--------------------------------------------------------------- */
+@media (max-width: 1300px) {
+  .results {
+    width: 163%;
+    font-size: 80px;
+    padding-left: 0px;
+  }
+  main {
+    padding-bottom: 702px;
+    height: 67vh;
+    width: 90vw;
+  }
+}
+
+/* ----------------------------------1180PX--------------------------------------------------------------- */
+@media (max-width: 1180px) {
+  .results {
+    width: 163%;
+    font-size: 80px;
+    padding-left: 0px;
+  }
+}
+
+/* ----------------------------------1060PX--------------------------------------------------------------- */
+@media (max-width: 1060px) {
+  .results {
+    font-size: 60px;
+  }
+  .form__content {
+    padding-left: 88px;
+    justify-content: space-around;
+  }
+
+  input {
+    width: 120px;
+    font-size: 20px;
+    padding-left: 15px;
+  }
+
+  .btn {
+    right: -10%;
+    top: -35px;
+  }
+
+  .btn-arrow {
+    background-color: var(--Purple);
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    right: -240px;
+    cursor: pointer;
+  }
+  main {
+    width: 90vw;
+
+    border-radius: 23px 23px 120px 23px;
+    height: 80vh;
+  }
+
+  .line-divide {
+    width: 390px;
+    margin-left: -14px;
+    margin-right: 20px;
+  }
+  .results {
+    width: 163%;
+    font-size: 70px;
+    padding-left: 0px;
+  }
+
+  .form__content {
+    gap: 25px;
+  }
+}
+
+/* ----------------------------------985X--------------------------------------------------------------- */
+@media (max-width: 985px) {
+  main {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 80vh;
+    width: 90vw;
+  }
+  .results {
+    font-size: 60px;
+  }
+
+  .ErrorDay {
+    margin-top: 0px;
+    font-size: 10px;
+    width: 100%;
+    margin-left: 5px;
+  }
+
+  .ErrorMonth {
+    margin-top: 0px;
+    font-size: 10px;
+    width: 100%;
+    margin-left: 5px;
+  }
+
+  .ErrorYear {
+    margin-top: 0px;
+    font-size: 10px;
+    width: 100%;
+    margin-left: 5px;
+  }
+
+  #label-day {
+    margin-left: 20px;
+  }
+
+  #label-month {
+    margin-left: 20px;
+  }
+
+  #label-year {
+    margin-left: 20px;
+  }
+  .btn-arrow {
+    width: 60px;
+    height: 60px;
+  }
+  .btn-arrow img {
+    width: 35px;
+  }
+  input {
+    width: 100px;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+}
+
+/* ----------------------------------768X--------------------------------------------------------------- */
+@media (max-width: 768px) {
+  main {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 80vh;
+    width: 90vw;
+  }
+  input {
+    width: 100px;
+    margin-right: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .form__content {
+    gap: 10px;
+    margin-left: 22px;
+  }
+
+  .results {
+    font-size: 40px;
+    width: 290%;
+  }
+  .line-divide {
+    width: 300px;
+  }
+  .btn {
+    right: -40px;
+  }
+  input {
+    width: 77px;
+      
+  }
+}
+
+/* ----------------------------------617X--------------------------------------------------------------- */
+@media (max-width: 617px) {
+  main {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 80vh;
+    width: 90vw;
+  }
+
+  input {
+    width: 77px;
+    font-size: 20px;
+  }
+  .line-divide {
+    width: 390px;
+    margin-left: -20px;
+    margin-right: 20px;
+  }
+}
+
+/* ----------------------------------375X--------------------------------------------------------------- */
+@media (max-width: 375px) {
+  main {
+    width: 94vw;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 80vh;
+  }
+  .form__control {
+    width: 50px;
+  }
+  input {
+    width: 93px;
+    font-size: 20px;
+  }
+  .form__content {
+    gap: 55px;
+    padding-left: 28px;
+  }
+  .results {
+    font-size: 48px;
+    padding-right: 0px;
+    width: 170%;
+    padding-left: 0px;
+  }
+
+  .line-divide {
+    width: 333px;
+    margin-left: -34px;
+  }
+  .btn {
+    right: -14%;
+  }
+}
