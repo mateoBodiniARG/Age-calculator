@@ -169,7 +169,7 @@ input::-webkit-inner-spin-button {
 /* -------------------------------------------------------------------------------------------------------- */
 
 /* MEDIAQUERIES */
-@media (max-width: 1420px) {
+/* @media (max-width: 1420px) {
     .results {
         width: 163%;
         font-size: 90px;
@@ -181,32 +181,32 @@ input::-webkit-inner-spin-button {
     gap: 12px;
     padding-left: 81px;
   }
-}
+} */
 /* ----------------------------------1300PX--------------------------------------------------------------- */
-@media (max-width: 1300px) {
+/* @media (max-width: 1300px) {
     .results {
         width: 163%;
         font-size: 80px;
         padding-left: 0px;
       }
   main {
-    padding-bottom: 602px;
+    padding-bottom: 702px;
     height: 67vh;
   }
   
-}
+} */
 
 /* ----------------------------------1180PX--------------------------------------------------------------- */
-@media (max-width: 1180px) {
+/* @media (max-width: 1180px) {
     .results {
         width: 163%;
         font-size: 80px;
         padding-left: 0px;
       }
-}
+} */
 
 /* ----------------------------------1060PX--------------------------------------------------------------- */
-@media (max-width: 1060px) {
+/* @media (max-width: 1060px) {
   .results {
     font-size: 60px;
   }
@@ -253,5 +253,115 @@ input::-webkit-inner-spin-button {
 
   .form__content {
     gap: 25px;
+  }
+} */
+
+
+/* ----------------------------------985X--------------------------------------------------------------- */
+/* @media (max-width: 985px) {
+  .results{
+    font-size: 60px;
+  }
+
+  .ErrorDay {
+  margin-top: 0px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--Light-red);
+  width: 150%;
+}
+
+.ErrorMonth {
+  margin-top: 0px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--Light-red);
+  width: 150%;
+}
+
+.ErrorYear {
+  margin-top: 0px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--Light-red);
+  width: 150%;
+}
+
+#label-day{
+  margin-left: 20px;
+}
+
+#label-month{
+  margin-left: 20px;
+}
+
+#label-year{
+  margin-left: 20px;
+}
+} */
+
+
+/* ----------------------------------985X--------------------------------------------------------------- */
+/* @media (max-width: 760px) {
+  main{
+    margin-bottom: 0px ;
+    padding-bottom: 0px;
+    height: 60vh;
+  }
+  input{
+    width: 100px;
+  }
+
+  .form__content{
+    gap: 10px;
+  }
+
+  .results{
+    font-size: 50px;
+  }
+  .line-divide{
+    width: 300px;
+  }
+  .btn{
+    right: -40px;
+  }
+} */
+
+
+/* ----------------------------------375X--------------------------------------------------------------- */
+@media (max-width: 375px) {
+  main{
+    width: 94vw;
+    margin-bottom: 0px ;
+    padding-bottom: 0px;
+    height: 80vh
+  }
+  .form__control {
+    width: 50px;
+  }
+  input{
+    width: 93px;
+    font-size: 20px;
+  }
+  .form__content{
+    gap: 55px;
+    padding-left: 28px;
+  }
+  .results{
+    font-size: 48px;
+    padding-right: 0px;
+    width: 170%;
+    padding-left: 0px;
+  }
+
+  .line-divide{
+    width: 333px;
+    margin-left: -34px;
+  }
+  .btn{
+    right: -14%;
   }
 }

@@ -15,7 +15,7 @@ function validateDay(dayValue) {
     errorDay.innerHTML = "This field is required";
     labelDay.classList.add('ErrorDay')
   } else if (dayValue <= 0 || dayValue > 31) {
-    errorDay.innerHTML = "Must be in the past";
+    errorDay.innerHTML = "invalid data";
     labelDay.classList.add('ErrorDay')
   } else {
     errorDay.innerHTML = "";
@@ -28,7 +28,7 @@ function validateMonth(monthValue) {
     errorMonth.innerHTML = "This field is required";
     labelMonth.classList.add('ErrorMonth')
   } else if (monthValue > 12 || monthValue <= 0) {
-    errorMonth.innerHTML = "Must be in the past";
+    errorMonth.innerHTML = "invalid data";
     labelMonth.classList.add('ErrorMonth')
   } else {
     errorMonth.innerHTML = "";
@@ -41,7 +41,7 @@ function validateYear(yearValue) {
     errorYear.innerHTML = "This field is required";
     labelYear.classList.add('ErrorYear')
   } else if (yearValue > 2023) {
-    errorYear.innerHTML = "Must be in the past";
+    errorYear.innerHTML = "invalid data";
     labelYear.classList.add('ErrorYear')
   } else {
     errorYear.innerHTML = "";
