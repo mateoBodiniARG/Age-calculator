@@ -20,9 +20,11 @@
     padding-left: 0px;
   }
   main {
-    padding-bottom: 702px;
-    height: 67vh;
-    width: 90vw;
+    width: 94vw;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 575px;
+    max-height: 100%;
   }
 }
 
@@ -66,10 +68,11 @@
     cursor: pointer;
   }
   main {
-    width: 90vw;
-
-    border-radius: 23px 23px 120px 23px;
-    height: 80vh;
+    width: 94vw;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 575px;
+    max-height: 100%;
   }
 
   .line-divide {
@@ -91,10 +94,11 @@
 /* ----------------------------------985X--------------------------------------------------------------- */
 @media (max-width: 985px) {
   main {
+    width: 94vw;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    height: 80vh;
-    width: 90vw;
+    height: 575px;
+    max-height: 100%;
   }
   .results {
     font-size: 60px;
@@ -149,10 +153,11 @@
 /* ----------------------------------768X--------------------------------------------------------------- */
 @media (max-width: 768px) {
   main {
+    width: 94vw;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    height: 80vh;
-    width: 90vw;
+    height: 575px;
+    max-height: 100%;
   }
   input {
     width: 100px;
@@ -167,7 +172,7 @@
   }
 
   .results {
-    font-size: 40px;
+    font-size: 50px;
     width: 290%;
   }
   .line-divide {
@@ -185,14 +190,21 @@
 /* ----------------------------------617X--------------------------------------------------------------- */
 @media (max-width: 617px) {
   main {
+    width: 94vw;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    height: 80vh;
-    width: 90vw;
+    height: 575px;
+    max-height: 100%;
+  }
+  .results {
+    font-size: 50px;
+    padding-right: 0px;
+    width: 170%;
+    padding-left: 0px;
   }
 
   input {
-    width: 77px;
+    width: 100px;
     font-size: 20px;
   }
   .line-divide {
@@ -208,7 +220,8 @@
     width: 94vw;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    height: 80vh;
+    height: 575px;
+    max-height: 100%;
   }
   .form__control {
     width: 50px;
@@ -225,6 +238,35 @@
     font-size: 48px;
     padding-right: 0px;
     width: 170%;
+    padding-left: 0px;
+  }
+
+  .line-divide {
+    width: 333px;
+    margin-left: -34px;
+  }
+  .btn {
+    right: -14%;
+  }
+}
+
+/* ----------------------------------375X--------------------------------------------------------------- */
+@media (max-width: 320px) {
+  .form__control {
+    width: 40px;
+  }
+  input {
+    width: 93px;
+    font-size: 20px;
+  }
+  .form__content {
+    gap: 60px;
+    padding-left: 28px;
+  }
+  .results {
+    font-size: 38px;
+    padding-right: 0px;
+    width: 200%;
     padding-left: 0px;
   }
 

@@ -12,7 +12,7 @@ const labelMonth = document.getElementById('label-month')
 
 function validateDay(dayValue) {
   if (dayValue === "") {
-    errorDay.innerHTML = "This field is required";
+    errorDay.innerHTML = "Cannot be empty";
     labelDay.classList.add('ErrorDay')
   } else if (dayValue <= 0 || dayValue > 31) {
     errorDay.innerHTML = "invalid data";
@@ -25,7 +25,7 @@ function validateDay(dayValue) {
 
 function validateMonth(monthValue) {
   if (monthValue === "") {
-    errorMonth.innerHTML = "This field is required";
+    errorMonth.innerHTML = "Cannot be empty";
     labelMonth.classList.add('ErrorMonth')
   } else if (monthValue > 12 || monthValue <= 0) {
     errorMonth.innerHTML = "invalid data";
@@ -38,7 +38,7 @@ function validateMonth(monthValue) {
 
 function validateYear(yearValue) {
   if (yearValue === "") {
-    errorYear.innerHTML = "This field is required";
+    errorYear.innerHTML = "Cannot be empty";
     labelYear.classList.add('ErrorYear')
   } else if (yearValue > 2023) {
     errorYear.innerHTML = "invalid data";
