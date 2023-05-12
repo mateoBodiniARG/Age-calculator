@@ -11,6 +11,8 @@
     gap: 12px;
     padding-left: 81px;
   }
+
+  
 }
 /* ----------------------------------1300PX--------------------------------------------------------------- */
 @media (max-width: 1300px) {
@@ -68,7 +70,7 @@
     cursor: pointer;
   }
   main {
-    width: 94vw;
+    width: 80vw;
     margin-bottom: 0px;
     padding-bottom: 0px;
     height: 575px;
@@ -76,13 +78,13 @@
   }
 
   .line-divide {
-    width: 390px;
+    width: 940px;
     margin-left: -14px;
     margin-right: 20px;
   }
   .results {
     width: 163%;
-    font-size: 70px;
+    font-size: 65px;
     padding-left: 0px;
   }
 

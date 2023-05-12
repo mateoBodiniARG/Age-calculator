@@ -40,7 +40,7 @@ function validateYear(yearValue) {
   if (yearValue === "") {
     errorYear.innerHTML = "Cannot be empty";
     labelYear.classList.add('ErrorYear')
-  } else if (yearValue > 2023) {
+  } else if (yearValue > 2023 || yearValue <= 0) {
     errorYear.innerHTML = "invalid data";
     labelYear.classList.add('ErrorYear')
   } else {
@@ -59,70 +59,71 @@ function errorHandling() {
   validateYear(yearValue);
 
   if (errorDay.innerHTML === "" && errorMonth.innerHTML === "" && errorYear.innerHTML === "") {
+    const birthDate = new Date(`${yearValue}-${monthValue}-${dayValue}`);
     const now = new Date();
-    const currentYear = now.getFullYear();
+    const diff = now.getTime() - birthDate.getTime();
+    const ageInYears = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+    const birthMonth = birthDate.getMonth();
     const currentMonth = now.getMonth();
+    let ageInMonths = currentMonth - birthMonth;
+    if (ageInMonths < 0) {
+      ageInMonths += 12;
+    }
+    const birthDay = birthDate.getDate();
     const currentDay = now.getDate();
-
-    function daysInMonth(month, year) {
-      return new Date(month,year, 0).getDate();
+    let ageInDays = currentDay - birthDay;
+    if (ageInDays < 0) {
+      const daysInLastMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+      ageInDays += daysInLastMonth;
+      ageInMonths--;
     }
-
-    let ageInYears = currentYear - yearValue - 1;
-    let ageInMonths = currentMonth + (12 - monthValue);
-    let ageInDays = currentDay + (daysInMonth(monthValue, yearValue) - dayValue);
-
-    if (ageInMonths >= 12) {
-      ageInMonths = ageInMonths - 12;
-      ageInYears++;
-    }
-
 
     const newcontent = `<section class="results">
-    <div class="animationYear">
+      <div class="animationYear">
         <p>
-            <span id="yearsScreen">${ageInYears}</span>
-            years
+          <span id="yearsScreen">${ageInYears}</span>
+          years
         </p>
-    </div>
+      </div>
 
-    <div class="animationMonth">
+      <div class="animationMonth">
         <p>
-            <span id="monthsScreen">${ageInMonths}</span>
-            months
+          <span id="monthsScreen">${ageInMonths}</span>
+          months
         </p>
-    </div>
+      </div>
 
-    <div class="dayAnimation">
+      <div class="dayAnimation">
         <p>
-            <span id="daysScreen">${ageInDays}</span>
-            days
+          <span id="daysScreen">${ageInDays}</span>
+          days
         </p>
-    </div>
-  </section>`;
-    results.innerHTML = newcontent
+      </div>
+    </section>`;
+    results.innerHTML = newcontent;
   }
 }
 
-dayInput.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    errorHandling();
-  }
-});
 
-monthInput.addEventListener("keypress", function (event) {
+dayInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     errorHandling();
   }
-});
+})
 
-yearInput.addEventListener("keypress", function (event) {
+monthInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     errorHandling();
   }
-});
+})
+
+yearInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    errorHandling();
+  }
+})
 
 btn.addEventListener("click", errorHandling);
