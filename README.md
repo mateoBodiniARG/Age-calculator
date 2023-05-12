@@ -10,7 +10,7 @@ The idea of this project was to practice javascript by creating an application t
 - Git
 
 ## Live Denmo
-https://genuine-biscotti-583526.netlify.app/
+https://age-calculator-mb.netlify.app/
 
 ## What's Next?
 
