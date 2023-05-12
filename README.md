@@ -1,7 +1,7 @@
-# Age-calculator
+## Age-calculator
 ![DesktopVersion](/design/desktop-completed.jpg)
 
-The idea of this project was to practice javascript by creating an application that would calculate the age of a person from their date of birth.
+# The idea of this project was to practice javascript by creating an application that would calculate the age of a person from their date of birth.
 
 ## Technologies and Tools used
 - HTML
