@@ -17,7 +17,11 @@ function validateDay(dayValue) {
   } else if (dayValue <= 0 || dayValue > 31) {
     errorDay.innerHTML = "invalid data";
     labelDay.classList.add('ErrorDay')
-  } else {
+  } else if (dayValue.length < 2){
+    errorDay.innerHTML = "Minimum 2 numbers";
+    labelDay.classList.add('ErrorDay')
+  } 
+  else {
     errorDay.innerHTML = "";
     labelDay.classList.remove('ErrorDay')
   }
@@ -30,7 +34,11 @@ function validateMonth(monthValue) {
   } else if (monthValue > 12 || monthValue <= 0) {
     errorMonth.innerHTML = "invalid data";
     labelMonth.classList.add('ErrorMonth')
-  } else {
+  } else if (monthValue.length < 2){
+    errorMonth.innerHTML = "Minimum 2 numbers";
+    labelMonth.classList.add('ErrorMonth')
+  }
+  else {
     errorMonth.innerHTML = "";
     labelMonth.classList.remove('ErrorMonth')
   }
@@ -40,7 +48,7 @@ function validateYear(yearValue) {
   if (yearValue === "") {
     errorYear.innerHTML = "Cannot be empty";
     labelYear.classList.add('ErrorYear')
-  } else if (yearValue > 2023 || yearValue <= 0) {
+  } else if (yearValue > 2023 || yearValue <= 99) {
     errorYear.innerHTML = "invalid data";
     labelYear.classList.add('ErrorYear')
   } else {
