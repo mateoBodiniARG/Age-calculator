@@ -5,64 +5,67 @@ const btn = document.querySelector(".btn-arrow");
 const errorDay = document.querySelector(".ErrorDay");
 const errorMonth = document.querySelector(".ErrorMonth");
 const errorYear = document.querySelector(".ErrorYear");
-const results = document.querySelector(".results")
-const labelYear = document.getElementById('label-year')
-const labelDay = document.getElementById('label-day')
-const labelMonth = document.getElementById('label-month')
+const results = document.querySelector(".results");
+const labelYear = document.getElementById("label-year");
+const labelDay = document.getElementById("label-day");
+const labelMonth = document.getElementById("label-month");
 
-function validateDay(dayValue) {
+function validateDay(dayValue, monthValue, yearValue) {
   if (dayValue === "") {
     errorDay.innerHTML = "Cannot be empty";
-    labelDay.classList.add('ErrorDay')
+    labelDay.classList.add("ErrorDay");
   } else if (dayValue <= 0 || dayValue > 31) {
     errorDay.innerHTML = "invalid data";
-    labelDay.classList.add('ErrorDay')
-  } else if (dayValue.length < 2){
-    errorDay.innerHTML = "Minimum 2 numbers";
-    labelDay.classList.add('ErrorDay')
-  } 
-  else {
-    errorDay.innerHTML = "";
-    labelDay.classList.remove('ErrorDay')
+    labelDay.classList.add("ErrorDay");
+  } else {
+    // Verificar que el día es válido para el mes y año dados
+    const lastDayOfMonth = new Date(yearValue, monthValue, 0).getDate();
+    if (dayValue > lastDayOfMonth) {
+      errorDay.innerHTML = `Must enter a day between 1 and ${lastDayOfMonth}`;
+      labelDay.classList.add("ErrorDay");
+    } else {
+      errorDay.innerHTML = "";
+      labelDay.classList.remove("ErrorDay");
+    }
   }
 }
+
 
 function validateMonth(monthValue) {
   if (monthValue === "") {
     errorMonth.innerHTML = "Cannot be empty";
-    labelMonth.classList.add('ErrorMonth')
+    labelMonth.classList.add("ErrorMonth");
   } else if (monthValue > 12 || monthValue <= 0) {
     errorMonth.innerHTML = "invalid data";
-    labelMonth.classList.add('ErrorMonth')
-  } else if (monthValue.length < 2){
+    labelMonth.classList.add("ErrorMonth");
+  } else if (monthValue.length < 2) {
     errorMonth.innerHTML = "Minimum 2 numbers";
-    labelMonth.classList.add('ErrorMonth')
-  }
-  else {
+    labelMonth.classList.add("ErrorMonth");
+  } else {
     errorMonth.innerHTML = "";
-    labelMonth.classList.remove('ErrorMonth')
+    labelMonth.classList.remove("ErrorMonth");
   }
 }
 
 function validateYear(yearValue) {
   if (yearValue === "") {
     errorYear.innerHTML = "Cannot be empty";
-    labelYear.classList.add('ErrorYear')
-  } else if (yearValue > 2023 || yearValue <= 99) {
+    labelYear.classList.add("ErrorYear");
+  } else if (yearValue > new Date().getFullYear() || yearValue < 1900) {
     errorYear.innerHTML = "invalid data";
-    labelYear.classList.add('ErrorYear')
+    labelYear.classList.add("ErrorYear");
   } else {
     errorYear.innerHTML = "";
-    labelYear.classList.remove('ErrorYear')
+    labelYear.classList.remove("ErrorYear");
   }
 }
-
 
 function errorHandling() {
   const dayValue = dayInput.value;
   const monthValue = monthInput.value;
   const yearValue = yearInput.value;
-  validateDay(dayValue);
+  // validateDay(dayValue, monthValue);
+  validateDay(dayValue, monthValue, yearValue);
   validateMonth(monthValue);
   validateYear(yearValue);
 
@@ -118,20 +121,20 @@ dayInput.addEventListener("keypress", (event) => {
     event.preventDefault();
     errorHandling();
   }
-})
+});
 
 monthInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     errorHandling();
   }
-})
+});
 
 yearInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     errorHandling();
   }
-})
+});
 
 btn.addEventListener("click", errorHandling);
